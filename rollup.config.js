@@ -1,4 +1,3 @@
-import { terser } from 'rollup-plugin-terser'
 import typescript from 'rollup-plugin-typescript2'
 import size from 'rollup-plugin-size'
 
@@ -7,9 +6,6 @@ const plugins = [
     tsconfig: 'tsconfig.json',
     removeComments: true,
     useTsconfigDeclarationDir: true,
-  }),
-  terser({
-    include: ['fre.js'],
   }),
   size()
 ]
